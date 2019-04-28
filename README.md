@@ -3,6 +3,9 @@
 Module created to facilitate the creation and usage of data structures
 
 [![Build Status](https://travis-ci.com/BarthJr/datastructs.svg?branch=master)](https://travis-ci.com/BarthJr/datastructs)
+[![Updates](https://pyup.io/repos/github/BarthJr/datastructs/shield.svg)](https://pyup.io/repos/github/BarthJr/datastructs/)
+[![Python 3](https://pyup.io/repos/github/BarthJr/datastructs/python-3-shield.svg)](https://pyup.io/repos/github/BarthJr/datastructs/)
+
 
 # Installation
 
