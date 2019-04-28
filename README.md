@@ -1,5 +1,7 @@
 # datastructs
 
+Module created to facilitate the creation and usage of data structures
+
 # Installation
 
 ```Python3
