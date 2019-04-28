@@ -2,6 +2,8 @@
 
 Module created to facilitate the creation and usage of data structures
 
+[![Build Status](https://travis-ci.com/BarthJr/datastructs.svg?branch=master)](https://travis-ci.com/BarthJr/datastructs)
+
 # Installation
 
 ```Python3
