@@ -14,6 +14,7 @@ pipenv install datastructs
 ```
 
 # How to Use
+## Binary Tree
 
 ```Python3
 >>> from datastructs import BinaryTree
@@ -29,5 +30,11 @@ pipenv install datastructs
 8 6 4 7 2 5 1 3 
 >>> binary_tree.print('pos')
 8 6 7 4 5 2 3 1 
+
+```
+## Linked List
+```Python3
+>>> from datastructs import LinkedList
+>>> linked_list = LinkedList()
 
 ```
