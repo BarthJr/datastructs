@@ -28,3 +28,9 @@ class LinkedList:
                 res.append(list_node.val)
             list_node = list_node.next
         return res
+
+    def print(self) -> None:
+        list_nodes = self._traversal(self.head)
+        for list_node in list_nodes[:-1]:
+            print(list_node, end='->')
+        print(list_nodes[-1])
