@@ -24,16 +24,40 @@ def test_create_linked_list_passing_int():
 
 def test_create_linked_list_with_int():
     linked_list = LinkedList(4)
-    linked_list._traversal(linked_list.head) == [4]
+    assert linked_list._traversal(linked_list.head) == [4]
 
 
 def test_create_linked_list_and_insert_int():
     linked_list = LinkedList()
     linked_list.add(5)
-    linked_list._traversal(linked_list.head) == [5]
+    assert linked_list._traversal(linked_list.head) == [5]
 
 
 def test_create_linked_list_with_int_and_insert_int():
     linked_list = LinkedList(4)
     linked_list.add(5)
-    linked_list._traversal(linked_list.head) == [4, 5]
+    assert linked_list._traversal(linked_list.head) == [4, 5]
+
+
+def test_create_linked_list_and_insert_list():
+    linked_list = LinkedList()
+    linked_list.add([4, 5])
+    assert linked_list._traversal(linked_list.head) == [4, 5]
+
+
+def test_create_linked_list_with_int_and_insert_list():
+    linked_list = LinkedList(3)
+    linked_list.add([4, 5])
+    assert linked_list._traversal(linked_list.head) == [3, 4, 5]
+
+
+def test_create_linked_list_with_list_and_insert_int():
+    linked_list = LinkedList([2, 3])
+    linked_list.add(4)
+    assert linked_list._traversal(linked_list.head) == [2, 3, 4]
+
+
+def test_create_linked_list_with_list_and_insert_list():
+    linked_list = LinkedList([2, 3])
+    linked_list.add([4, 5])
+    assert linked_list._traversal(linked_list.head) == [2, 3, 4, 5]
