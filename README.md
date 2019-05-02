@@ -43,3 +43,16 @@ pipenv install datastructs
 1->2->3->4->5->6->7->8
 
 ```
+
+# How to contribute
+
+All code follows [PEP8](https://www.python.org/dev/peps/pep-0008/), except for the line length, which accepts 120 characters.
+
+1. Make the project fork and clone the project: `git clone git@github.com:<your_user>/datastructs.git`
+2. Install pipenv: `pip install pipenv`
+3. Install the dependencies for dev: `pipenv install -d`
+4. Develop the feature with tests
+5. Run the tests locally: `pipenv run pytest`
+6. Send the pull request with tests in a single commit
+7. Submit the PR for review
+8. After reviewed and corrected, the PR will be accepted and the lib post in PyPi
