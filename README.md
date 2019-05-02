@@ -36,5 +36,18 @@ pipenv install datastructs
 ```Python3
 >>> from datastructs import LinkedList
 >>> linked_list = LinkedList()
+>>> linked_list.add(5)
+>>> linked_list._traversal(linked_list.head)
+[5]
+>>> linked_list.print()
+5
+
+>>> linked_list = LinkedList(4)
+>>> linked_list.add(5)
+>>> linked_list._traversal(linked_list.head)
+[4, 5]
+>>> linked_list.print()
+4->5
+
 
 ```
