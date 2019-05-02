@@ -13,11 +13,18 @@ class LinkedList:
         if val:
             self.add(val)
 
-    def add(self, val):
-        if self.head is None:
-            self.head = self.tail = ListNode(val)
-        else:
-            self.tail.next = ListNode(val)
+    def add(self, val: Union[int, List]) -> None:
+        if type(val) == int:
+            if self.head is None:
+                self.head = self.tail = ListNode(val)
+            else:
+                self.tail.next = ListNode(val)
+        elif type(val) == list:
+            if self.head is None:
+                self.head = self.tail = ListNode(val.pop(0))
+            while val:
+                self.tail.next = ListNode(val.pop(0))
+                self.tail = self.tail.next
 
     def _traversal(self, list_node: ListNode = None) -> List:
         res = []
