@@ -20,11 +20,14 @@ class LinkedList:
             else:
                 self.tail.next = ListNode(val)
         elif type(val) == list:
-            if self.head is None:
-                self.head = self.tail = ListNode(val.pop(0))
-            while val:
-                self.tail.next = ListNode(val.pop(0))
-                self.tail = self.tail.next
+            if val:
+                val_range = val[:]
+                if self.head is None:
+                    self.head = self.tail = ListNode(val[0])
+                    val_range = val[1:]
+                for num in val_range:
+                    self.tail.next = ListNode(num)
+                    self.tail = self.tail.next
 
     def _traversal(self, list_node: ListNode = None) -> List:
         res = []
