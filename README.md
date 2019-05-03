@@ -41,6 +41,8 @@ pipenv install datastructs
 >>> linked_list.add([5, 6, 7, 8])
 >>> linked_list.print()
 1->2->3->4->5->6->7->8
+>>> LinkedList().print(linked_list.head.next)
+2->3->4->5->6->7->8
 
 ```
 

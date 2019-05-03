@@ -1,3 +1,3 @@
-__version__ = '0.2'
+__version__ = '0.2.1'
 from .trees import BinaryTree
 from .linked_list import LinkedList

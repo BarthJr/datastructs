@@ -61,3 +61,15 @@ def test_create_linked_list_with_list_and_insert_list():
     linked_list = LinkedList([2, 3])
     linked_list.add([4, 5])
     assert linked_list._traversal(linked_list.head) == [2, 3, 4, 5]
+
+
+def test_if_list_remains_the_same_after_passed_as_parameter_in_constructor():
+    lst = [1, 2, 3, 4]
+    LinkedList(lst)
+    assert lst == [1, 2, 3, 4]
+
+
+def test_if_list_remains_the_same_after_passed_as_parameter_in_method():
+    lst = [1, 2, 3, 4]
+    LinkedList(lst).add(lst)
+    assert lst == [1, 2, 3, 4]
