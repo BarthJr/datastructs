@@ -36,8 +36,10 @@ class LinkedList:
             list_node = list_node.next
         return res
 
-    def print(self) -> None:
-        list_nodes = self._traversal(self.head)
-        for list_node in list_nodes[:-1]:
-            print(list_node, end='->')
+    def print(self, list_node: ListNode = None) -> None:
+        if list_node is None:
+            list_node = self.head
+        list_nodes = self._traversal(list_node)
+        for i in list_nodes[:-1]:
+            print(i, end='->')
         print(list_nodes[-1])
