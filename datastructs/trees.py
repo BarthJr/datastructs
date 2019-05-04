@@ -118,23 +118,28 @@ class BinaryTree:
             else:
                 return right_height + 1
 
-    def _insert_node(self, value: int) -> None:
-        if self.root:
-            root = self.root
-            node = Node(value)
-            while root:
-                if not root.left:
-                    root.left = node
-                    break
-                elif not root.right:
-                    root.right = node
-                    break
-                if root.left and root.left.value:
-                    root = root.left
-                elif root.right and root.right.value:
-                    root = root.right
-        else:
-            self.root = Node(value)
+    def _insert_node(self, val: int, node: TreeNode = None) -> None:
+        """Insert node in level order traversal"""
+        if self.root is None:
+            self.root = TreeNode(val)
+            return
+        if node is None:
+            node = self.root
+        q = list()
+        q.append(node)
+        while len(q):
+            node = q[0]
+            q.pop(0)
+            if not node.left:
+                node.left = TreeNode(val)
+                break
+            else:
+                q.append(node.left)
+            if not node.right:
+                node.right = TreeNode(val)
+                break
+            else:
+                q.append(node.right)
 
     def _insert_list(self, array: List) -> None:
         for num in array:
