@@ -3,16 +3,16 @@ from typing import List, Union
 NOTHING = object()
 
 
-class Node:
-    def __init__(self, value: int) -> None:
-        self.value = value
+class TreeNode:
+    def __init__(self, val: int) -> None:
+        self.val = val
         self.left = None
         self.right = None
 
     def __repr__(self):
         left = None if self.left is None else self.left.value
         right = None if self.right is None else self.right.value
-        return '(D:{}, L:{}, R:{})'.format(self.value, left, right)
+        return '(D:{}, L:{}, R:{})'.format(self.val, left, right)
 
 
 class BinaryTree:
@@ -45,29 +45,29 @@ class BinaryTree:
         elif type(value) == list:
             self._insert_list(value)
 
-    def _print_pre_order(self, node: Node = NOTHING) -> None:
+    def _print_pre_order(self, node: TreeNode = NOTHING) -> None:
         if node is NOTHING:
             node = self.root
         if node:
-            print(node.value, end=' ')
+            print(node.val, end=' ')
             self._print_pre_order(node.left)
             self._print_pre_order(node.right)
 
-    def _print_in_order(self, node: Node = NOTHING) -> None:
+    def _print_in_order(self, node: TreeNode = NOTHING) -> None:
         if node is NOTHING:
             node = self.root
         if node:
             self._print_in_order(node.left)
-            print(node.value, end=' ')
+            print(node.val, end=' ')
             self._print_in_order(node.right)
 
-    def _print_post_order(self, node: Node = NOTHING) -> None:
+    def _print_post_order(self, node: TreeNode = NOTHING) -> None:
         if node is NOTHING:
             node = self.root
         if node:
             self._print_post_order(node.left)
             self._print_post_order(node.right)
-            print(node.value, end=' ')
+            print(node.val, end=' ')
 
     def _print_level_order(self) -> None:
         h = self.tree_height(self.root)
@@ -75,34 +75,35 @@ class BinaryTree:
             self._print_given_level(self.root, i)
         print()
 
-    def _print_given_level(self, node: Node, level: int) -> None:
+    def _print_given_level(self, node: TreeNode, level: int) -> None:
         """Given a level of tree, print the nodes"""
         if node is None:
             return
         if level == 1:
-            print(node.value, end=' ')
+            print(node.val, end=' ')
         elif level > 1:
             self._print_given_level(node.left, level - 1)
             self._print_given_level(node.right, level - 1)
 
     def level_order_traversal(self) -> List:
+        """Traverse a binary tree in level order"""
         res = []
         h = self.tree_height(self.root)
         for i in range(1, h + 1):
             self._given_level(self.root, i, res)
         return res
 
-    def _given_level(self, node: Node, level: int, res: List) -> None:
+    def _given_level(self, node: TreeNode, level: int, res: List) -> None:
         """Given a level of tree, gets the nodes"""
         if node is None:
             return
         if level == 1:
-            res.append(node.value)
+            res.append(node.val)
         elif level > 1:
             self._given_level(node.left, level - 1, res)
             self._given_level(node.right, level - 1, res)
 
-    def tree_height(self, node: Node) -> int:
+    def tree_height(self, node: TreeNode) -> int:
         """Finds the height of the tree"""
         if node is None:
             return 0
