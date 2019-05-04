@@ -25,11 +25,12 @@ pipenv install datastructs
 >>> binary_tree.print()
 1 2 3 4 5 6 7 8 
 >>> binary_tree.print('pre')
-1 2 4 6 8 7 5 3 
+1 2 4 8 5 3 6 7 
 >>> binary_tree.print('in')
-8 6 4 7 2 5 1 3 
+8 4 2 5 1 6 3 7 
 >>> binary_tree.print('pos')
-8 6 7 4 5 2 3 1 
+8 4 5 2 6 7 3 1 
+
 
 ```
 ## Linked List

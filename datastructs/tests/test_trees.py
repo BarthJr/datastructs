@@ -1,4 +1,10 @@
 from datastructs import BinaryTree
+from datastructs.trees import TreeNode
+
+
+def test_create_node():
+    node = TreeNode(4)
+    assert isinstance(node, TreeNode)
 
 
 def test_create_binary_tree():
@@ -22,8 +28,8 @@ def test_level_order_traversal_from_inserted_int():
 
 
 def test_level_order_traversal_from_inserted_list():
-    binary_tree = BinaryTree([4, 5, 6, 7])
-    assert binary_tree.level_order_traversal() == [4, 5, 6, 7]
+    binary_tree = BinaryTree([4, 5, 6, 7, 8, 9])
+    assert binary_tree.level_order_traversal() == [4, 5, 6, 7, 8, 9]
 
 
 def test_create_binary_tree_with_int_and_insert_int():
