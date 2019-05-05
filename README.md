@@ -10,7 +10,7 @@ Module created to facilitate the creation and use of data structures
 # Installation
 
 ```Python3
-pipenv install datastructs
+pip install datastructs
 ```
 
 # How to Use
@@ -24,12 +24,18 @@ pipenv install datastructs
 >>> binary_tree.add([5, 6, 7, 8])
 >>> binary_tree.print()
 1 2 3 4 5 6 7 8 
+>>> binary_tree.print(node=binary_tree.root, order='lvl')
+1 2 3 4 5 6 7 8 
 >>> binary_tree.print('pre')
 1 2 4 8 5 3 6 7 
 >>> binary_tree.print('in')
 8 4 2 5 1 6 3 7 
 >>> binary_tree.print('pos')
 8 4 5 2 6 7 3 1 
+>>> BinaryTree().print(node=binary_tree.root.left)
+2 4 5 8 
+>>> BinaryTree().print(node=binary_tree.root.left, order='in')
+8 4 2 5 
 
 
 ```
